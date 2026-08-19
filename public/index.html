@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏨 الفندق الأسود</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏨 <span class="gold">الفندق الأسود</span></h1>
+            <p class="subtitle">مواجهة المعرفة 1 ضد 1</p>
+        </header>
+
+        <div id="loginScreen">
+            <div class="card">
+                <h2>مرحباً بك</h2>
+                <p class="hint">أدخل بياناتك لبدء اللعب</p>
+                
+                <div class="form-group">
+                    <label>👤 اسم اللاعب</label>
+                    <input type="text" id="playerName" placeholder="اكتب اسمك..." value="أحمد">
+                </div>
+                
+                <div class="form-group">
+                    <label>🆔 معرف اللاعب</label>
+                    <input type="text" id="playerId" placeholder="معرف فريد" value="user_123">
+                </div>
+
+                <div class="diamonds-display">
+                    💎 <span id="diamondsCount">100</span> ماسة
+                </div>
+
+                <button id="findMatchBtn" class="btn-gold">
+                    🔍 بحث عن خصم (5 💎)
+                </button>
+
+                <div id="errorMessage" class="error"></div>
+            </div>
+        </div>
+
+        <div id="matchScreen" style="display:none;">
+            <div class="match-header">
+                <span id="matchStatus">⏳ جاري البحث...</span>
+                <span id="opponentName"></span>
+            </div>
+            
+            <div id="questionsContainer"></div>
+            <div id="resultContainer"></div>
+        </div>
+
+        <button id="backBtn" style="display:none;" class="btn-secondary">↩️ العودة للرئيسية</button>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

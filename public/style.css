@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a0a;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+.container {
+    max-width: 650px;
+    width: 100%;
+    padding: 25px;
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    border-radius: 24px;
+    border: 1px solid #D4AF37;
+    box-shadow: 0 0 60px rgba(212, 175, 55, 0.08);
+    margin: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.gold {
+    color: #D4AF37;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.card {
+    background: #121212;
+    padding: 30px 25px;
+    border-radius: 16px;
+    border: 1px solid #2a2a2a;
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.hint {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #ccc;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #D4AF37;
+}
+
+.btn-gold {
+    background: #D4AF37;
+    color: #0a0a0a;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 12px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-gold:hover {
+    transform: scale(1.02);
+    background: #c5a12e;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+.btn-secondary {
+    background: #2a2a2a;
+    color: #ccc;
+    border: 1px solid #444;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background: #333;
+}
+
+.diamonds-display {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 12px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    margin: 15px 0;
+}
+
+.diamonds-display span {
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+.error {
+    color: #ff4444;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 0.95rem;
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #2a2a2a;
+}
+
+#matchStatus {
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+.question-box {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 15px 0;
+    border: 1px solid #2a2a2a;
+}
+
+.question-box h3 {
+    color: #D4AF37;
+    margin-bottom: 12px;
+}
+
+.question-box .question-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    margin: 6px 0;
+    background: #222;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: right;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.option-btn:hover {
+    background: #2a2a2a;
+    border-color: #D4AF37;
+}
+
+.option-btn.correct {
+    border-color: #00cc66;
+    background: #003d1a;
+}
+
+.option-btn.wrong {
+    border-color: #ff4444;
+    background: #3d0000;
+}
+
+.option-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#resultContainer {
+    text-align: center;
+    padding: 25px;
+    font-size: 1.4rem;
+}
+
+.win {
+    color: #D4AF37;
+}
+
+.lose {
+    color: #ff6666;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card {
+        padding: 20px 15px;
+    }
+    
+    .btn-gold {
+        font-size: 1rem;
+        padding: 14px;
+    }
+}
