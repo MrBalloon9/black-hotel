@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000');
+const socket = io('https://black-hotel-ybzh.onrender.com');
 
 const loginScreen = document.getElementById('loginScreen');
 const matchScreen = document.getElementById('matchScreen');
